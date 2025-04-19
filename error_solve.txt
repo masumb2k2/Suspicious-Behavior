@@ -1,0 +1,6 @@
+
+#cv2.error: OpenCV(4.11.0) 
+
+sudo apt install libgtk2.0-dev pkg-config as the prompt says for Ubuntu users -> [Same Error]
+pip uninstall opencv-python-headless -> [Other Error]
+pip uninstall opencv-python; pip install opencv-python -> [Solved]
