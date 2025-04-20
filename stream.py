@@ -3,7 +3,8 @@ import cv2
 
 app = Flask(__name__)
 camera = cv2.VideoCapture(0)  # Use the default camera
-camera = cv2.VideoCapture("poster.mp4")
+# camera = cv2.VideoCapture("poster.mp4")
+camera = cv2.VideoCapture("fight.mp4")
 
 def generate_frames():
     while True:
