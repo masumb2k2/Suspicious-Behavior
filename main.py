@@ -29,7 +29,6 @@ height = 640
 # Load YOLO models
 violenceDetect_model = YOLO("best.pt")
 person_model = YOLO("yolo11n.pt")
-
 classNames = ['Fight', 'Normal', 'Poster']
 # Set confidence thresholds
 writer = None
@@ -76,7 +75,7 @@ def put_bangla_text(image, text, position, font, color=(255, 255, 255)):
 
 while True:
     success, frame = cap.read()
-    resized_frame = cv2.resize(frame, (width, height))
+    #resized_frame = cv2.resize(frame, (width, height))
 
     if not success:
         break
