@@ -3,12 +3,15 @@ import cv2
 
 app = Flask(__name__)
 camera = cv2.VideoCapture(0)  # Use the default camera
+camera = cv2.VideoCapture("poster.mp4")
 
 def generate_frames():
     while True:
         success, frame = camera.read()
         if not success:
-            break
+            # End of video — rewind to the start
+            camera.set(cv2.CAP_PROP_POS_FRAMES, 0)
+            continue  # Try reading again\
         else:
             _, buffer = cv2.imencode('.jpg', frame)
             frame = buffer.tobytes()
